@@ -1,6 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Merriweather:wght@300;400;700&display=swap');
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -10,4 +16,18 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-coffee-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-coffee-700 transition-colors duration-200 shadow-md hover:shadow-lg;
+  }
+
+  .btn-secondary {
+    @apply bg-latte-200 text-coffee-800 px-6 py-3 rounded-lg font-medium hover:bg-latte-300 transition-colors duration-200;
+  }
+
+  .btn-outline {
+    @apply border-2 border-coffee-600 text-coffee-600 px-6 py-3 rounded-lg font-medium hover:bg-coffee-600 hover:text-white transition-colors duration-200;
+  }
 }
