@@ -64,11 +64,10 @@ app.get('/health', (req, res) => {
 
 // API routes
 import authRoutes from './routes/auth';
-app.use('/api/auth', authRoutes);
+import menuRoutes from './routes/menu';
 
-app.use('/api/menu', (req, res) => {
-  res.json({ message: 'Menu routes coming soon' });
-});
+app.use('/api/auth', authRoutes);
+app.use('/api/menu', menuRoutes);
 
 app.use('/api/orders', (req, res) => {
   res.json({ message: 'Order routes coming soon' });
