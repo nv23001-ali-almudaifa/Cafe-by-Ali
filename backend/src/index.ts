@@ -62,10 +62,9 @@ app.get('/health', (req, res) => {
   });
 });
 
-// API routes (to be implemented)
-app.use('/api/auth', (req, res) => {
-  res.json({ message: 'Auth routes coming soon' });
-});
+// API routes
+import authRoutes from './routes/auth';
+app.use('/api/auth', authRoutes);
 
 app.use('/api/menu', (req, res) => {
   res.json({ message: 'Menu routes coming soon' });
