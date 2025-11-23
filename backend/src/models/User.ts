@@ -57,7 +57,9 @@ const userSchema = new Schema<IUser>({
       type: Schema.Types.ObjectId,
       ref: 'MenuItem'
     }]
-  }
+  },
+  resetPasswordToken: String,
+  resetPasswordExpires: Date
 }, {
   timestamps: true,
   toJSON: { virtuals: true },
