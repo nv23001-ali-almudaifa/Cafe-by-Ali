@@ -13,6 +13,8 @@ export interface IUser extends Document {
     dietaryRestrictions: string[];
     favoriteItems: Types.ObjectId[];
   };
+  resetPasswordToken?: string;
+  resetPasswordExpires?: Date;
   createdAt: Date;
   updatedAt: Date;
 }
